@@ -1,6 +1,6 @@
 import React from 'react'
 import GrandChild from "./GrandChild"
-const Child = ({name}) => {
+const Child = () => {
   return (
     <div> <GrandChild/></div>
   )

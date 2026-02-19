@@ -1,25 +1,17 @@
-import react from 'react';
-import Header from './components/Header';
 import Parent from './components/Parent'
+import BasicForm from './components/BasicForm'
+import { UserContext } from './context/UserContext'
 const App = () => {
-    // const name="Rajesh";
-    // showsecondheader= true;
     const userData={
         name : 'Rajesh',
         age: '23',
         number : '23456899876543',
     }
     return (
-      <>
-        {/* <div>
-            <h1>Hello World</h1>
-           <Header name={name} />
-            <Header name={name} age="200"/>
-            <Header name={name} age="25" number="9999999999"/>
-
-        </div></> */}
-        </>
-        
+      <UserContext.Provider value={userData}>
+        <BasicForm />
+        <Parent />
+      </UserContext.Provider>
     )
 }
 export default App;
